@@ -14,7 +14,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
-
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
@@ -83,7 +82,7 @@ public class CredentialsValidationServiceTest {
                 .statusCode(statusCode)
                 .body("Error", equalTo(errorMessage));
     }
-
+    //TODO: Delete duplication
     private class RequestBody {
         RequestBody(String email, String password) {
             this.email = email;

@@ -110,6 +110,7 @@ public class RegistrationPasswordValidationServiceTest {
                 .andExpect(MockMvcResultMatchers.content().string(responseBody));
     };
 
+    //TODO: Delete duplication
     private class RequestBody {
         RequestBody(String password) {
             name = "Ivan";
